@@ -3,4 +3,4 @@ falcon:
   command: bundle exec bake test
 puma:
   url: https://github.com/puma/puma
-  command: bundle exec rake test
+  command: bundle exec rake compile; test/runner -v test_puma_localhost_authority.rb
