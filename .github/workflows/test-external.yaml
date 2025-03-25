@@ -27,9 +27,11 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
-    - uses: ruby/setup-ruby@v1
+    - uses: ruby/setup-ruby-pkgs@v1
       with:
         ruby-version: ${{matrix.ruby}}
+        apt-get: ragel
+        brew: ragel
         bundler-cache: true
     
     - name: Run tests
